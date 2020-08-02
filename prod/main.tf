@@ -23,7 +23,7 @@ resource "aws_s3_bucket" "prod" {
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::${var.prefix}-${random_pet.petname.id}/*"
+                "arn:aws:s3:::${var.prod_prefix}-${random_pet.petname.id}/*"
             ]
         }
     ]
